@@ -214,6 +214,117 @@ body {
 /* end of navigation */
 /* end of navbar */
 
+/* header */
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .5)), url(../img/header-1.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.brand {
+    display: flex;
+    cursor: pointer;
+}
+
+.hotel-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #deaa86;
+    letter-spacing: .2rem;
+}
+
+.banner {
+    color: #dddddd;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    animation: anim 2s;
+}
+
+.banner-paragraph {
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: anim 1.5s .5s backwards;
+}
+
+.banner-button {
+    width: 21rem;
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+    color: #333333;
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    background: linear-gradient(to right, gold, goldenrod);
+    cursor: pointer;
+    animation: anim 1s 1s backwards;
+}
+
+.banner-button:hover {
+    background: linear-gradient(to left, gold, goldenrod);  
+}
+
+.banner-button:active {
+    transform: translateY(.2rem);
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* end of header */
+
+/* about us */
+.about-us {
+    margin-left: 8rem;
+    display: flex;
+    background-color: #dddddd;
+}
+
+.about-us-content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    box-sizing: border-box;
+}
+
+.about-us-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #555555;
+}
+
+.small-underline {
+    width: 9rem;
+    
+}
+
+.about-us-images {
+    flex: 1 1
+}
+/* end of about us */
+
 
 
 
