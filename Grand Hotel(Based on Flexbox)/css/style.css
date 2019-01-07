@@ -315,17 +315,210 @@ body {
     color: #555555;
 }
 
-.small-underline {
-    width: 9rem;
-    
+.sub-heading {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: #b85d1c;
+}
+
+.about-us-paragraph {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.about-us-btn {
+    width: 15rem;
+    padding: .7rem .5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-arrow {
+    margin-left: .5rem;
+    transition: margin-left 0.3s;
+}
+
+.about-us-btn:hover .btn-arrow {
+    margin-left: 1.5rem;
 }
 
 .about-us-images {
-    flex: 1 1
+    flex: 1 1;
+    position: relative;
+}
+
+.image {
+    width: 32rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: .4rem;
+    border: .2rem solid #b85d1c;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+}
+
+.image-1 {
+    transform: translate(-20%, -90%);\
+}
+
+.image-2 {
+    transform: translate(-70%, -70%);
+}
+
+.image-3 {
+    transform: translate(-50%, -50%);
+}
+
+.image-3 {
+    transform: translate(-30%, -30%);
+}
+
+.image-1:hover {
+    width: 34rem;
+    z-index: 10;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+}
+
+.image-2:hover {
+    width: 34rem;
+    z-index: 10;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+}
+
+.image-3:hover {
+    width: 34rem;
+    z-index: 10;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+}
+
+.image-4:hover {
+    width: 34rem;
+    z-index: 10;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
 }
 /* end of about us */
 
+/* common header */
+.common-header {
+    padding: 5rem;
+    text-align: center;
+    color: #b85d1c;
+}
 
+.common-heading {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+
+.small-underline {
+    width: 9rem;
+    height: .1rem;
+    margin: 0 auto 1rem auto;
+    background-color: #b85d1c;
+}
+
+.big-underline {
+    width: 20rem;
+    height: .1rem;
+    margin: auto;
+    background-color: #b85d1c;
+}
+/* end of common header */
+
+/* rooms */
+.rooms {
+    margin-left: 8rem;
+}
+
+.rooms-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.room-card {
+    width: 60rem;
+    margin: 5rem;
+    background-color: #15141b;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);)
+}
+
+.room-img {
+    width: 100%;
+}
+
+.room-card-content {
+    color: #dddddd;
+    padding: 2rem;
+}
+
+.room-card-heading {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.room-card-paragraph {
+    font-size: 1.5rem;
+    color: #777777;
+}
+
+.room-price {
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: right;
+    margin: 0;
+}
+
+.room-card-btn {
+    width: 15rem;
+    padding: 1.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    border-radius: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.rooms-btn-wrapper {
+    text-align: center;
+}
+
+.rooms-btn {
+    width: 20rem;
+    padding: 1.5rem 1rem;
+    margin: 4rem 0rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #b85d1c;
+    border: .2rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, .2);
+    transition: all 0.2s;
+}
+
+.rooms-btn:hover {
+    color: #dddddd;
+    background-color: #b85d1c;
+}
+/* end of rooms */
 
 
 
