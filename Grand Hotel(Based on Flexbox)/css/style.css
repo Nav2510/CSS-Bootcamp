@@ -85,6 +85,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 8;
     transition: left .8s cubic-bezier(1, 0, 0, 1);
 }
 
@@ -380,7 +381,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.image-3 {
+.image-4 {
     transform: translate(-30%, -30%);
 }
 
@@ -636,6 +637,7 @@ body {
     background-color: #b85d1c;
     color: #ffffff;
     border: none;
+    cursor: pointer;
 }
 
 .gallery {
@@ -693,6 +695,103 @@ body {
     color: goldenrod;
 }
 /* end of footer */
+
+@media (max-width: 1400px) {
+    .customers-card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customer-card:first-child {
+        margin-bottom: 3rem;
+    }
+
+    .main-part {
+        flex-direction: column;
+    }
+
+    .footer-list {
+        display: flex;
+    }
+
+    .footer-list-item {
+        margin-right: 3rem;
+    }
+
+    .about-us {
+        flex-direction: column;
+        padding-bottom: 20rem;
+    }
+
+    .about-us-content {
+        margin-bottom: 13rem;
+    }
+
+    .image {
+        width: 20rem;
+    }
+
+    .image-1:hover {
+        width: 25rem;
+        z-index: 7;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+    }
+    
+    .image-2:hover {
+        width: 25rem;
+        z-index: 7;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+    }
+    
+    .image-3:hover {
+        width: 25rem;
+        z-index: 7;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+    }
+    
+    .image-4:hover {
+        width: 25rem;
+        z-index: 7;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.6);
+    }
+}
+
+@media (max-width: 500px) {
+    .navigation {
+        width: 28rem;
+    }
+
+    .navigation-search-input {
+        width: 20rem;
+    }
+
+    .hotel-heading {
+        font-size: 1.5rem;
+
+    }
+
+    .about-us {
+        padding-bottom: 15rem;
+    }
+
+    .about-us-heading {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .sub-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-us-content {
+        padding: 5rem;
+    }
+
+    .image {
+        width: 13rem;
+    }
+}
 
 
 
