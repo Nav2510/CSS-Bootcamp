@@ -19,7 +19,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content) 70vh;
     grid-row-gap: 1.6rem;
     margin-top: 1.6rem;
 }
@@ -182,6 +182,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: all 1s;
+    z-index: 100;
 }
 
 .second-nav-item:first-child:hover .dropdown {
@@ -219,3 +220,160 @@ body {
     color: #458a9f;
 }
 /* end of navbar */
+
+/* banner */
+.banner {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+.banner-btn {
+    width: 16rem;
+    height: 5rem;
+    background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    color: #ffffff;
+    border: .1rem solid #ffffff;
+    border-radius: .3rem;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-btn-text-one {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    transition: top .2s;
+}
+
+.banner-btn-text-two {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    transition: top .2s;
+}
+
+.banner-btn:hover .banner-btn-text-one {
+    top: -100%;
+}
+
+.banner-btn:hover .banner-btn-text-two {
+    top: 50%;
+}
+
+.banner-heading {
+    font-size: 10rem;
+    color: #12376e;
+    margin-bottom: 6rem;
+}
+.slideshow {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-wrapper {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    position: relative;
+    animation: slideshow 20s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideshow {
+    0% {left: 0}
+
+    10% {left: 0}
+
+    15% {left: -100%}
+
+    25% {left: -100%}
+
+    30% {left: -200%}
+
+    40% {left: -200%}
+
+    45% {left: -300%}
+
+    55% {left: -300%}
+
+    60% {left: -200%}
+
+    70% {left: -200%}
+
+    75% {left: -100%}
+
+    85% {left: -100%}
+
+    90% {left: 0}
+}
+
+.slide-btn {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #bbbbbb;
+    border: .2rem solid #d38800;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 95%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slide-btn:focus {
+    background-color: #12376e;
+}
+
+.slide-btn-1 {
+    left: 47%;
+}
+.slide-btn-2 {
+    left: 49%;
+}
+.slide-btn-3 {
+    left: 51%;
+}
+.slide-btn-4 {
+    left: 53%;
+}
+
+.slide-btn-1:focus ~ .slideshow-wrapper {
+    animation: none;
+    left: 0;
+}
+.slide-btn-2:focus ~ .slideshow-wrapper {
+    animation: none;
+    left: -100%;
+}
+.slide-btn-3:focus ~ .slideshow-wrapper {
+    animation: none;
+    left: -200%;
+}
+.slide-btn-4:focus ~ .slideshow-wrapper {
+    animation: none;
+    left: -300%;
+}
+/* end of banner */
