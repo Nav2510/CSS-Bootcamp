@@ -581,3 +581,407 @@ body {
     grid-row: 3 / 5;
 }
 /* end of gallery */
+
+/* contact */
+.contact {
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    background-color: #12376e;
+    padding: 2rem 0;
+}
+
+.contact-heading {
+    justify-self: end;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.contact-form {
+    display: flex;
+}
+
+.contact-form input {
+    outline: none;
+    padding: .4rem 1rem;
+    border: .1rem solid #ffffff;
+}
+
+.contact-input {
+    border-radius: 5rem 0 0 5rem;
+    border-right: none;
+}
+
+.contact-btn {
+    background-color: #34598f;
+    color: #ffffff;
+    border-radius: 0 5rem 5rem 0;
+    border-left: none;
+    transition: 0.2s background-color;
+}
+
+.contact-btn:hover {
+    background-color: #12376e;
+}
+/* end of contact */
+
+/* footer */
+.footer {
+    grid-column: 2 / 10;
+    grid-row: 9 / 10;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2rem 0 3rem 0;
+    color: #34598f;
+}
+/* end of footer */
+
+/* modal box */
+.forms-wrapper {
+    background-color: #eeeeee;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    padding: 2rem;
+    border: .1rem solid #34598f;
+    border-radius: .3rem;
+    display: none;    
+}
+
+.show-btns-wrapper {
+    display: flex;
+    padding: 1rem;
+}
+
+.show-form-btn {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    background-color: #12376e;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    border: .1rem solid #eeeeee;
+    cursor: pointer;
+}
+
+.form-heading {
+    font-size: 2rem;
+    color: #12376e;
+    text-transform: uppercase;
+    padding: 1rem 0 0 .2rem;
+}
+
+.forms-wrapper form {
+    width: 50rem;
+    padding: 1rem;
+}
+
+.forms-wrapper form input:not(.form-btn) {
+    background-color: #ffffff;
+    color: #777777;
+    padding: 1.3rem;
+    margin: .3rem 0;
+    border: .2rem solid #eeeeee;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.fullname-inputs-wrapper {
+    display: flex;
+}
+
+.fullname-inputs-wrapper input {
+    width: 50%;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-btn {
+    width: 35%;
+    background-color: #d38800;
+    color: #ffffff;
+    letter-spacing: .3rem;
+    padding: 1rem;
+    border: none;
+    margin-top: .5rem;
+}
+
+.x-btn {
+    font-size: 2rem;
+    color: #00154c;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 3.3rem;
+    right: 3.5rem;
+    cursor: pointer;
+}
+
+.login-form {
+    display: none;
+}
+
+.show-signup-form {
+    color: #888888;
+    background-color: #34598f;
+    pointer-events: none;
+}
+
+#show-form:checked ~ .show-btns-wrapper .show-login-form{
+    color: #888888;
+    background-color: #34598f;
+    pointer-events: none;
+}
+
+#show-form:checked ~ .show-btns-wrapper .show-signup-form{
+    color: #ffffff;
+    background-color: #12376e;
+    pointer-events: initial;
+}
+
+#show-form:checked ~ .signup-form {
+    display: none;
+}
+
+#show-form:checked ~ .login-form {
+    display: block;
+}
+
+#show-hide-forms:checked ~ .forms-wrapper {
+    display: block;
+    animation: anim .5s;
+}
+
+#show-hide-forms:checked ~ .container {
+    pointer-events: none;
+    opacity:  0.6;
+}
+
+.first-nav-link  label{
+    cursor: pointer;
+}
+
+@keyframes anim {
+    0% {
+        left: 40%;
+    }
+    50% {
+        left: 60%;
+    }
+    75% {
+        left: 45%;
+    }
+    100% {
+        left: 50%;
+    }
+}
+/* end of modal box */
+
+@media(max-width: 1350px) {
+    .banner-heading {
+        font-size: 7.3rem;
+    }
+
+    .day-offer-heading {
+        font-size : 5rem;
+    }
+
+    .day-offer-paragraph {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 1030px) {
+    .container {
+        grid-template-columns: minmax(4rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(4rem, 1fr);
+    }
+
+    .social-icons {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .first-nav {
+        grid-column: 1 / 10;
+        grid-row: 1 / 2;
+    }
+
+    .first-nav-link i {
+        margin-right: 1.3rem;
+    }
+
+    .banner-heading {
+        font-size: 6.5rem;
+    }
+
+    .day-offer-heading {
+        font-size : 4.5rem;
+    }
+
+    .day-offer-paragraph {
+        font-size: 2.5rem;
+    }
+
+    .day-offer-img-one {
+        align-self: end;
+    }
+
+    .forms-wrapper form {
+        width: 40rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .container {
+        grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(2rem, 1fr);
+        grid-template-rows: repeat(3, min-content) 50vh repeat(5, min-content);
+    }
+
+    .banner-heading {
+        font-size: 5.5rem;
+    }
+
+    .day-offer-heading {
+        font-size : 4rem;
+    }
+
+    .day-offer-paragraph {
+        font-size: 2rem;
+    }
+
+    .social-icons {
+        grid-column: 2 / 6;
+        grid-row: 2 / 3;
+    }
+
+    .dropdown {
+        width: 52.5rem;
+        grid-template-columns: repeat(7, 7.5rem);
+    }
+
+    .dropdown-list-link {
+        margin-bottom: .7rem;
+    }
+
+    .dropdown-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner-btn {
+        width: 14rem;
+        height: 4rem;
+    }
+
+    .slide-btn-1 {
+        left: 45.5%;
+    }
+    .slide-btn-2 {
+        left: 48.5%;
+    }
+    .slide-btn-3 {
+        left: 51.5%;
+    }
+    .slide-btn-4 {
+        left: 54.5%;
+    }
+
+    .day-offer-btn {
+        width: 13rem;
+        padding: .8rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        grid-template-columns: minmax(1rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(1rem, 1fr);
+    }
+
+    .first-nav-list {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+
+    .social-icons {
+        grid-column: 2 / 7;
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    }
+
+    .dropdown {
+        width: 30rem;
+        grid-template-columns: repeat(4, 7.5rem);
+    }
+    .dropdown-image {
+        display: none;
+    }
+
+    .banner-heading {
+        font-size: 3.5rem;        
+    }
+
+    .banner-btn {
+        transform: translateY(-2.5rem);
+        height: 3.1rem;
+    }
+
+    .slide-btn {
+        top: 90%;
+    }
+
+    .slide-btn-1 {
+        left: 42.5%;
+    }
+    .slide-btn-2 {
+        left: 47.5%;
+    }
+    .slide-btn-3 {
+        left: 52.5%;
+    }
+    .slide-btn-4 {
+        left: 57.5%;
+    }
+
+    .day-offer {
+        grid-column-gap: 1.4rem;
+    }
+
+    .day-offer-heading {
+        font-size: 2.5rem;
+    }
+
+    .day-offer-paragraph {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-gap: .8rem;
+        padding: .8rem;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    .contact-heading {
+        font-size: 1.8rem;
+        justify-self: center;
+    }
+
+    .contact-form {
+        justify-self: center;
+    }
+
+    .forms-wrapper  form{
+        width: 30rem;
+    }
+}

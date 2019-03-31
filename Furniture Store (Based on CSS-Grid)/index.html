@@ -14,6 +14,36 @@
 
 <body>
 
+    <!-- modal box -->
+    <input type="checkbox" id="show-hide-forms" hidden>
+    <div class="forms-wrapper">
+        <label for="show-hide-forms" class="x-btn">&#10005;</label>
+        <input type="checkbox" id="show-form" hidden>
+        <div class="show-btns-wrapper">
+            <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+            <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+        </div>
+
+        <form class="signup-form">
+            <h3 class="form-heading">Sign Up</h3>
+            <div class="fullname-inputs-wrapper">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Second Name">
+            </div>
+            <input type="text" class="form-input" placeholder="Username">
+            <input type="email" class="form-input" placeholder="Email Address">
+            <input type="password" class="form-input" placeholder="Password">
+            <input type="submit" value="SIGN UP" class="form-btn">
+        </form>
+
+        <form class="login-form">
+            <h3 class="form-heading">Log In</h3>
+            <input type="email" class="form-input" placeholder="Email Address">
+            <input type="password" class="form-input" placeholder="Password">
+            <input type="submit" value="LOG IN" class="form-btn">
+        </form>
+    </div>
+    <!-- end of modal box -->
     <div class="container">
         <ul class="social-icons">
             <li class="social-icon-item">
@@ -34,7 +64,7 @@
         <nav class="first-nav">
             <ul class="first-nav-list">
                 <li class="first-nav-item">
-                    <a href="#" class="first-nav-link"><i class="fas fa-sign-in-alt"></i>Sign Up / Log In</a>
+                    <a href="#" class="first-nav-link"><label for="show-hide-forms"><i class="fas first-nav-icon fa-sign-in-alt"></i>Sign Up / Log In</label></a>
                 </li>
                 <li class="first-nav-item">
                     <a href="#" class="first-nav-link"><i class="fas fa-shopping-cart"></i>Cart(<span>2
@@ -171,7 +201,7 @@
         <!-- end of day offer -->
 
         <!-- bestselling furniture -->
-        <section class="bestselling-furniture">\
+        <section class="bestselling-furniture">
             <h1 class="bestselling-furniture-header">
                 Bestselling Furniture
             </h1>
@@ -231,6 +261,25 @@
             <img src="images/gallery-img-12.jpeg" class="gallery-img gallery-img-12">
         </section>
         <!-- end of gallery -->
+
+        <!-- contact -->
+        <section class="contact">
+            <h1 class="contact-heading">Join us and be in the know</h1>
+            <form class="contact-form">
+                <input type="text" class="contact-input" placeholder="Enter email address">
+                <input type="submit" class="contact-btn" value="Sign Up">
+            </form>
+        </section>
+        <!-- end of contact -->
+
+        <!-- footer  -->
+        <footer class="footer">
+            <p>&copy; CodeAndCreate. All rights reserved</p>
+            <p>By</p>
+            <h3>Navdeep Singh</h3>
+
+        </footer>
+        <!-- end of footer -->
     </div>
 
 </body>
